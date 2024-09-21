@@ -386,4 +386,8 @@ footer {
     .header_controls a, .header_controls button {
         padding: 5px;
     }
+
+    .header_logo {
+        max-width: 50%
+    }
 }
