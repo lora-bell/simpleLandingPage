@@ -149,7 +149,51 @@ input {
 
 .features {
     background-color: white;
-    padding: 60px 115px;
+    padding: 30px;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
+}
+
+.card {
+    padding: 35px 40px 25px 40px;
+    border: 1px #D9E4E6 solid;
+    border-radius: 10px;
+}
+
+.card__logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+    font-size: 32px;
+    background-color: #eaeff9;
+    border-radius: 50%;
+}
+
+.logo_pig {
+    color: #ffb406;
+}
+
+.logo_clock {
+    color: #ad1714;
+}
+
+.logo_graph {
+    color: #22a030;
+}
+
+.card h3 {
+    font-size: 22px;
+}
+
+.card p {
+    font-size: 16px;
+    opacity: 0.8;
 }
 
 .form {
@@ -264,9 +308,17 @@ footer {
         position: static;
     }
 
-
     .about h1 {
         font-size: 50px;
+    }
+
+    .features {
+            padding: 20px;
+        }
+
+    .cards {
+        grid-template-columns: auto;
+        gap: 20px;
     }
 
     .form {
@@ -333,6 +385,11 @@ footer {
         height: 90%;
         justify-content: flex-start;
         margin-bottom: 30px;
+        text-align: center;
+    }
+
+    .about_info button {
+        align-self: center;
     }
 
     .about_info h1 {
@@ -340,7 +397,7 @@ footer {
     }
 
     .form {
-        padding: 0 10px 30px 10px;
+        padding: 10px 10px 30px 10px;
         height: 90%;
     }
 
