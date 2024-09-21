@@ -187,13 +187,73 @@ input {
     color: #22a030;
 }
 
-.card h3 {
-    font-size: 22px;
-}
-
 .card p {
     font-size: 16px;
+    line-height: 22px;
     opacity: 0.8;
+}
+
+.features__border {
+    margin: 50px 0;
+    border: solid 1px #E6EAF4
+}
+
+.features__feedback {
+    display: flex;
+}
+
+.features__feedback-left {
+    margin-right: 10px;
+}
+
+.features__feedback-left h2 {
+    font-size: 48px;
+    margin-top: 0;
+}
+
+.features__feedback-left p {
+    font-size: 18px;
+    line-height: 26px;
+    opacity: 0.7;
+}
+
+.features__feedback-right {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+}
+
+.features__box {
+    padding: 30px 40px 25px 40px;
+    color: white;
+    border-radius: 25px;
+}
+
+.features__box h3 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 48px;
+}
+
+.features__savings-box {
+    background-color: #dc5e26;
+    box-shadow: 0px 6px 0px rgb(221 95 38 / 20%);
+    margin-right: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.features__rate-box {
+    background-color: #1D263A;
+    box-shadow: 0px 6px 0px rgb(29 38 58 / 20%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.stars {
+    color: #ff7039;
 }
 
 .form {
@@ -279,19 +339,20 @@ footer {
 
 .footer__group h3 {
     font-size: 17px;
-    opacity: 0.7;
+    opacity: 0.8;
 }
 
 .footer__links {
     display: flex;
     flex-direction: column;
     gap: 5px;
+    opacity: 0.7;
 }
 
 .footer__copyright {
     margin-top: 10px;
     text-align: center;
-    opacity: 0.4;
+    opacity: 0.3;
 }
 
 @media (max-width: 1024px) {
@@ -304,12 +365,24 @@ footer {
         height: 55vh;
     }
 
-    .about_image_sun .about_image_solar_panel {
-        position: static;
+    .about {
+        padding: 10px;
+    }
+
+    .about_info {
+        gap: 20px;
     }
 
     .about h1 {
-        font-size: 50px;
+        font-size: 40px;
+    }
+
+    .about p {
+        font-size: 15px;
+    }
+
+    .about_image_sun .about_image_solar_panel {
+        position: static;
     }
 
     .features {
@@ -321,12 +394,77 @@ footer {
         gap: 20px;
     }
 
+    .card {
+        padding: 20px;
+        display: grid;
+        grid-template-columns: repeat(10, 1fr);
+        grid-template-rows: repeat(3, 1fr)
+        gap: 0;
+    }
+
+    .card div {
+        grid-column: 1 / 3;
+        grid-row: 1 / 3;
+    }
+
+    .card h3 {
+        grid-column: 3 / 11;
+        grid-row: 1 / 2;
+    }
+
+    .card p {
+        grid-column: 3 / 11;
+        grid-row: 2 / 3;
+    }
+
+    .features__feedback-left {
+        margin: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .features__feedback-left h2 {
+        font-size: 40px;
+    }
+
+    .features__feedback-right {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .features__box {
+        margin: 10px;
+        padding: 20px;
+    }
+
+    .features__box h3 {
+        font-size: 36px;
+        margin: 0;
+    }
+
+    .features__box p {
+        margin: 5px;
+    }
+
     .form {
-        padding: 0 20px;
+        padding: 20px;
     }
 
     footer {
         padding: 0 20px;
+    }
+
+    .footer__group {
+        margin-right: 50px;
+    }
+
+    .footer__group h3 {
+        font-size: 14px;
+    }
+
+    footer {
+        font-size: 11px;
     }
 
     h1 {
@@ -396,6 +534,31 @@ footer {
         font-size: 36px;
     }
 
+    .card {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .features__feedback {
+        flex-direction: column;
+    }
+
+    .features__feedback-left {
+        margin-right: 0;
+    }
+
+    .features__feedback-left h2 {
+        font-size: 36px;
+    }
+
+    .features__feedback-right {
+        align-items: flex-start;
+    }
+
+     .features__box {
+        width: 50%;
+     }
+
     .form {
         padding: 10px 10px 30px 10px;
         height: 90%;
@@ -431,6 +594,10 @@ footer {
     .footer__group {
         margin-right: 30px;
     }
+
+    .footer__group h3 {
+        margin-bottom: 5px;
+    }
 }
 
 @media (max-width: 540px){
@@ -446,5 +613,9 @@ footer {
 
     .header_logo {
         max-width: 50%
+    }
+
+    .features__box {
+        width: 80%;
     }
 }
