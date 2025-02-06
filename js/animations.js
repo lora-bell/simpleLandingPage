@@ -4,7 +4,7 @@ function generateFromTo(min, max){
     return Number((Math.random() * (max - min) + min).toFixed())
 }
 
-// анимация счетчика количества клиентов
+// анимация счетчика количества клиентов (вызывается в updateScroll)
 function increaseAnimationStep(count, element, endNumber){
     if(count <= endNumber){
         element.innerText = count
@@ -14,9 +14,8 @@ function increaseAnimationStep(count, element, endNumber){
         element.innerText = endNumber + "+"
     }
 }
-
-element = document.querySelector(".features__clients-count")
-increaseAnimationStep(100, element, 7000)
+//element = document.querySelector(".features__clients-count")
+//increaseAnimationStep(100, element, 7000)
 
 // выбор стоимости, поле "Другое"
 function handlerFunction(event){
@@ -43,12 +42,21 @@ function handlerFunction(event){
 document.querySelector("#price").addEventListener("change", handlerFunction)
 
 // изменение стиля header
+let animationInit = false
 function updateScroll(event){
     let header = document.querySelector("header")
     if(window.scrollY !== 0){
         header.classList.add("header__scrolled")
     }else{
         header.classList.remove("header__scrolled")
+    }
+    // изменение количества клиентов при прокрутке до элемента
+    let windowPosition = window.scrollY + window.innerHeight
+    let elementPosition = document.querySelector(".features__clients-count").offsetTop
+    if(windowPosition >= elementPosition && !animationInit){
+        element = document.querySelector(".features__clients-count")
+        animationInit = true
+        increaseAnimationStep(100, element, 7000)
     }
 }
 window.addEventListener("scroll", updateScroll)
