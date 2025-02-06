@@ -1,4 +1,4 @@
-const ANIMATION_SPEED = 90
+const ANIMATION_SPEED = 80
 
 function generateFromTo(min, max){
     return Number((Math.random() * (max - min) + min).toFixed())
@@ -11,16 +11,15 @@ function increaseAnimationStep(count, element, endNumber){
         count += generateFromTo(150, 250)
         setTimeout(increaseAnimationStep, ANIMATION_SPEED, count, element, endNumber)
     }else{
-        element.innerText = "5000+"
+        element.innerText = endNumber + "+"
     }
 }
 
 element = document.querySelector(".features__clients-count")
-increaseAnimationStep(100, element, 5000)
+increaseAnimationStep(100, element, 7000)
 
 // выбор стоимости, поле "Другое"
-document.querySelector("#price").addEventListener("change",
-    function handleSelectChange(event){
+function handlerFunction(event){
         if(event.target.value === "other"){
             let input = document.createElement("input")
             input.placeholder = "Введите ваш вариант (числовое значение)"
@@ -39,4 +38,17 @@ document.querySelector("#price").addEventListener("change",
                 formOtherInput.remove()
             }
         }
-})
+}
+
+document.querySelector("#price").addEventListener("change", handlerFunction)
+
+// изменение стиля header
+function updateScroll(event){
+    let header = document.querySelector("header")
+    if(window.scrollY !== 0){
+        header.classList.add("header__scrolled")
+    }else{
+        header.classList.remove("header__scrolled")
+    }
+}
+window.addEventListener("scroll", updateScroll)
