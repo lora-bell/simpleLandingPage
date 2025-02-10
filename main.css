@@ -1,6 +1,12 @@
+:root {
+  --color-yellow-elements: #f7eb75;
+  --color-dark-blue: #213053;
+  --color-green-elements: #83d627;
+}
+
 body {
     font-family: "Rubik", sans-serif;
-    color: #213053;
+    color: var(--color-dark-blue);
     margin: 0;
 }
 
@@ -22,7 +28,7 @@ header {
 
 a {
     text-decoration: none;
-    color: #213053;
+    color: var(--color-dark-blue);
 }
 
 header a {
@@ -38,7 +44,7 @@ header a {
 }
 
 header a:hover {
-    background-color: #ffde18;
+    background-color: var(--color-yellow-elements);
 }
 
 button {
@@ -46,7 +52,7 @@ button {
     font-size: 17px;
     font-weight: 600;
     color: #fff;
-    background-color: #83d627;
+    background-color: var(--color-green-elements);
     border: none;
     border-radius: 15px;
     cursor: pointer;
@@ -56,8 +62,8 @@ button {
 }
 
 button:hover {
-    background-color: #f7eb75;
-    color: #213053;
+    background-color: var(--color-yellow-elements);
+    color: var(--color-dark-blue);
     box-shadow: 0 16px 36px rgb(255 222 24 / 40%)
 }
 
@@ -103,7 +109,8 @@ input {
     height: 70%;
     justify-content: space-between;
     padding: 30px;
-    padding-top: 100px;
+    padding-top: 110px;
+    padding-bottom: 40px;
 }
 
 .about_info {
@@ -118,14 +125,15 @@ input {
 
 .about h1 {
     font-size: 60px;
-    color: #213053;
+    color: var(--color-dark-blue);
     line-height: 1;
     margin: 0;
 }
 
 .about p {
     font-size: 18px;
-    color: #213053b2;
+    color: var(--color-dark-blue);
+    opacity: 0.7;
     margin: 0;
 }
 
@@ -194,12 +202,12 @@ input {
     width: 100px;
     height: 100px;
     font-size: 32px;
-    background-color: #213053;
+    background-color: var(--color-dark-blue);
     border-radius: 50%;
 }
 
 .logo_pig {
-    color: #f7eb75;
+    color: var(--color-yellow-elements);
 }
 
 .logo_clock {
@@ -207,7 +215,7 @@ input {
 }
 
 .logo_graph {
-    color: #83d627;
+    color: var(--color-green-elements);
 }
 
 .card p {
@@ -217,7 +225,7 @@ input {
 }
 
 .features__border {
-    margin: 30px 0;
+    margin: 35px 0;
     border: solid 1px #E6EAF4
 }
 
@@ -269,7 +277,7 @@ input {
 }
 
 .features__rate-box {
-    background-color: #213053;
+    background-color: var(--color-dark-blue);
     box-shadow: 0px 6px 0px rgb(29 38 58 / 20%);
     display: flex;
     flex-direction: column;
@@ -289,7 +297,7 @@ input {
     background-size: cover;
     background-position: center center;
     flex-shrink: 0;
-    background-color: #213053;
+    background-color: var(--color-dark-blue);
     width: 50%;
 }
 
@@ -336,14 +344,14 @@ input {
     background-size: auto 80%;
     background-repeat: no-repeat;
     background-position: center right;
-    background-color: #213053;
+    background-color: var(--color-dark-blue);
     color: white;
     text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100%;
-    padding: 20px 0;
+    padding: 40px 0;
 }
 
 .form_container {
@@ -383,7 +391,7 @@ input {
 
 .form input {
     font-size: 17px;
-    color: #213053;
+    color: var(--color-dark-blue);
     height: 40px;
     padding: 0 15px 0 15px;
     border-radius: 10px;
@@ -392,7 +400,7 @@ input {
 
 .form select {
     font-size: 17px;
-    color: #213053;
+    color: var(--color-dark-blue);
     height: 40px;
     padding: 0 20px ;
     border-radius: 10px;
@@ -475,11 +483,6 @@ footer {
         position: static;
     }
 
-    .features {
-        padding: 20px;
-        padding-top: 0;
-    }
-
     .cards {
         grid-template-columns: auto;
         gap: 20px;
@@ -510,7 +513,6 @@ footer {
     }
 
     .features__border {
-        margin: 20px 0;
         border: 0px;
     }
 
