@@ -285,7 +285,7 @@ input {
     background-size: cover;
     background-position: center center;
     flex-shrink: 0;
-    background-color: blue;
+    background-color: #213053;
     width: 50%;
 }
 
@@ -299,6 +299,7 @@ input {
     padding: 30px 40px;
     border-radius: 25px;
     line-height: 22px;
+    box-shadow: 0px 6px 0px rgb(248 223 212 / 70%);
 }
 
 .promo__card h2 {
@@ -327,6 +328,10 @@ input {
 }
 
 .form {
+    background-image: url("image/contacts.png");
+    background-size: auto 80%;
+    background-repeat: no-repeat;
+    background-position: center right;
     background-color: #213053;
     color: white;
     text-align: center;
@@ -334,7 +339,14 @@ input {
     justify-content: center;
     align-items: center;
     height: 100%;
-    padding: 50px 0;
+    padding: 20px 0;
+}
+
+.form_container {
+    width: 550px;
+    background-color: #213053cf;
+    padding: 20px;
+    border-radius: 15px;
 }
 
 .form h1 {
@@ -345,10 +357,6 @@ input {
 .form p {
     font-size: 20px;
     opacity:0.65;
-}
-
-.form_container {
-    width: 550px;
 }
 
 .form__group {
@@ -528,6 +536,7 @@ footer {
 
     .form {
         padding: 30px;
+        background-position: center;
     }
 
     footer {
