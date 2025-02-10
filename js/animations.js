@@ -72,3 +72,4 @@ function onLinkClick(event){
 }
 
 document.querySelectorAll('a[href^="#"]').forEach(elem => addSmoothScroll(elem))
+document.querySelectorAll('button[href^="#"]').forEach(elem => addSmoothScroll(elem))
